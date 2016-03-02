@@ -1,5 +1,5 @@
 
-from gmail import GMail
+from gmail_sender import GMail
 from message import Message
 
 def cli():
