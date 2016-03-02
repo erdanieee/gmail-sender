@@ -5,7 +5,7 @@ try:
 except ImportError:
     from distutils.core import Command,setup
 
-import gmail
+import gmail_sender as gmail
 long_description = gmail.description
 version = gmail.version
 
@@ -17,7 +17,7 @@ class GenerateReadme(Command):
     def run(self):
         open("README","w").write(long_description)
 
-setup(name='gmail',
+setup(name='gmail_sender',
       version = version,
       description = 'Simple library to send email using GMail (includes background worker and logging classes)',
       long_description = long_description,
@@ -25,7 +25,7 @@ setup(name='gmail',
       author_email = 'paul.chakravarti@gmail.com',
       url = 'https://github.com/paulchakravarti/gmail-sender',
       cmdclass = { 'readme' : GenerateReadme },
-      packages = ['gmail'],
+      packages = ['gmail_sender'],
       license = 'BSD',
       classifiers = [ "Topic :: Communications :: Email" ]
      )
